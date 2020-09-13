@@ -15,8 +15,8 @@ def init():
     logger = logging.getLogger('playlist')
     logger.setLevel(logging.DEBUG)
 
-    console_format = logging.Formatter('%(levelname)5s %(module)7s: %(message)s')
-    file_format = logging.Formatter('%(levelname)5s %(module)7s: %(message)s')
+    console_format = logging.Formatter('%(asctime)s %(levelname)5s %(module)7s: %(message)s', '%H:%M:%S')
+    file_format = logging.Formatter('%(asctime)s %(levelname)5s %(module)7s: %(message)s', '%d/%m/%y %H:%M:%S')
 
     file_handler = logging.FileHandler(filename=f'{LOG_PATH}/{time.strftime("%d-%m-%Y_%H-%M-%S")}.log', encoding='utf-8', mode='w')
     file_handler.setFormatter(file_format)
