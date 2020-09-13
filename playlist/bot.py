@@ -8,6 +8,8 @@ from . import config
 from . import links
 from . import spotify
 
+REPO_LINK = "https://github.com/danielfspencer/playlist-bot"
+
 logger = logging.getLogger('playlist')
 bot = discord.ext.commands.Bot(command_prefix=config.creds['discord']['command_prefix'])
 
@@ -99,7 +101,9 @@ async def version(ctx):
     except subprocess.CalledProcessError:
         commit = 'unknown, could not run git'
 
-    await ctx.send(f'Playlist Bot [commit `{commit}`]')
+    message = f"Playlist Bot [commit `{commit}`]\n"
+    message += f"<{REPO_LINK}>"
+    await ctx.send(message)
 
 @bot.command()
 async def rebuild(ctx):
