@@ -1,0 +1,14 @@
+{
+    "discord": {
+        "token":"<discord bot token (string)>",
+        "server_id":"<discord server id (string)>",
+        "command_prefix": "pl/",
+        "admin_ids": [<user id (int)>],
+        "channels": [<channel id (int)>]
+    },
+    "spotify": {
+        "playlist_id": "<spotify id (string)>",
+        "client_id": "<spotify id (string)>",
+        "client_secret": "<spotify secret (string)>"
+    }
+}

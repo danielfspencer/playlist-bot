@@ -1,0 +1,2 @@
+spotipy==2.15.0
+discord.py==1.2.5
