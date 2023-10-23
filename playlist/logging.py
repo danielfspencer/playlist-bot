@@ -5,7 +5,7 @@ import time
 
 LOG_PATH = 'logs'
 CONSOLE_LEVEL = logging.DEBUG
-FILE_LEVEL = logging.INFO
+FILE_LEVEL = logging.DEBUG
 
 def init():
     os.makedirs(LOG_PATH, exist_ok=True)
